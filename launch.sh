@@ -12,9 +12,9 @@ else
 	exit 9
 fi
 
-if ! [[ -f 'DawnCraft%202.0.4_f3%20Serverpack.zip' ]]; then
+if ! [[ -f 'DawnCraft%202.0.5%20Serverpack.zip' ]]; then
 	rm -fr config kubejs libraries mods *.zip forge*.jar
-	curl -Lo 'DawnCraft%202.0.4_f3%20Serverpack.zip' 'https://edge.forgecdn.net/files/5213/816/DawnCraft%202.0.4_f3%20Serverpack.zip' && unzip -u -o 'DawnCraft%202.0.4_f3%20Serverpack.zip' -d /data
+	curl -Lo 'DawnCraft%202.0.5%20Serverpack.zip' 'https://edge.forgecdn.net/files/5220/522/DawnCraft%202.0.5%20Serverpack.zip' && unzip -u -o 'DawnCraft%202.0.5%20Serverpack.zip' -d /data
   curl -Lo forge-${FORGE_VERSION}-installer.jar 'https://maven.minecraftforge.net/net/minecraftforge/forge/'${FORGE_VERSION}'/forge-'${FORGE_VERSION}'-installer.jar'
 	java -jar $(ls forge-*-installer.jar) --installServer && rm -f forge-*-installer.jar
 fi
