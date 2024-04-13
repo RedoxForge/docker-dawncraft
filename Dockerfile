@@ -15,8 +15,6 @@ USER minecraft
 VOLUME /data
 WORKDIR /data
 
-EXPOSE 25565/tcp
-
 CMD ["/launch.sh"]
 
 ENV MOTD " Server Powered by Docker"

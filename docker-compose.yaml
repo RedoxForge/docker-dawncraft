@@ -1,0 +1,24 @@
+version: "3.9.1"
+
+services:
+
+  modpack:
+    container_name: modpack-net6
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    mem_limit: 8g
+    mem_reservation: 6g
+    ports:
+      - "27643:25565"
+    volumes:
+      - minecraft_net6:/data
+    stdin_open: true
+    tty: true
+    restart: on-failure:3
+
+
+volumes:
+  minecraft_net6:
+
+
